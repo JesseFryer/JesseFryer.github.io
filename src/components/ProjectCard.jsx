@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="pt-1 pb-1 pl-2 pr-2 mt-4 bg-gray-700 items-center shadow-lg rounded-lg flex flex-col">
+    <div className="pt-1 pb-1 pl-2 pr-2 mt-2 bg-gray-700 items-center shadow-lg rounded-lg flex flex-col h-1/2 min-h-[60vh] max-w-[80vw] overflow-y-auto max-h-full">
       <div className="p-2 pl-4 pr-4 flex justify-between items-center w-full">
         {/* Heading sticks to the left */}
         <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 flex-grow">
@@ -25,12 +25,15 @@ const ProjectCard = ({ project }) => {
 
       {/* Ensure the video is centered horizontally and vertically */}
       <div className="w-[100%] lg:w-[60%] bg-gray-700 p-2 flex justify-center items-center rounded-lg">
-        <video className="w-auto rounded-lg border-yellow-900 border-2 m-2 ml-4 mr-4" autoPlay loop muted>
+        <video className="w-auto rounded-lg border-yellow-900 border-2 shadow-md m-2 ml-4 mr-4" autoPlay loop muted>
           <source src={project.videoPath} type="video/mp4" />
         </video>
       </div>
       
-      <p className="text-sm sm:text-base text-center m-2 mb-4 text-gray-400 font-regular">{project.description}</p>
+      {/* Scrollable text content */}
+      <p className="text-sm sm:text-base text-center m-2 mb-4 text-gray-400 font-regular overflow-y-auto">
+        {project.description}
+      </p>
     </div>
   );
 };

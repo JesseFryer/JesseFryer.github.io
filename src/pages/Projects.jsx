@@ -18,12 +18,12 @@ const Projects = ({ projects }) => {
   };
 
   return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center px-4 sm:px-8">
-      <div className="lg:w-[20%] w-[50%]">
+    <section className="bg-[#131316] text-white min-h-screen flex flex-col items-center px-2 sm:px-8">
+      <div className="lg:w-[30%] w-[80%]">
         <Histogram skills={currentSkills} />
       </div>
 
-      <div className="lg:w-[50%] w-[90%]">
+      <div className="lg:w-[50%] w-[80%]">
         <Carousel
           items={projects.map((project, index) => (
             <ProjectCard key={index} project={project} />

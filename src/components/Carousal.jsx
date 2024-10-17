@@ -21,6 +21,17 @@ const Carousel = ({ items, onChange }) => {
     });
   };
 
+  // Handle click on a specific item
+  const handleItemClick = (index) => {
+    if (index === currentIndex) return; // Do nothing if clicking on the current item
+
+    if (index > currentIndex) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  };
+
   return (
     <div className="relative flex justify-center items-center">
       {/* Left Arrow */}
@@ -42,7 +53,7 @@ const Carousel = ({ items, onChange }) => {
           {items.map((item, index) => (
             <div
               key={index}
-              className={`min-w-full flex justify-center items-center transition-transform duration-500 transform ${
+              className={`min-w-full flex justify-center items-center cursor-pointer transition-transform duration-500 transform ${
                 index === currentIndex
                   ? 'scale-100 opacity-100'  // Active card
                   : 'scale-75 opacity-50'    // Unselected cards
@@ -50,6 +61,7 @@ const Carousel = ({ items, onChange }) => {
               style={{
                 transition: 'transform 0.5s ease, opacity 0.5s ease', // Smooth transition
               }}
+              onClick={() => handleItemClick(index)} // Handle click on item
             >
               {item}
             </div>
