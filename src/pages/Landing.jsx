@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
-    <section className="bg-[#131316] text-white h-screen flex flex-col justify-center items-center">
+    <section className="bg-[#131316] h-screen flex flex-col justify-center items-center">
 
       <div className="w-[30%] sm:w-[25%] lg:w-[10%] mb-5">
         <img 
@@ -20,11 +20,6 @@ const Landing = () => {
         </h1>
         <p className="text-2xl mb-8 text-gray-300">A passionate Software Developer</p>
         <p className="text-sm mb-8 text-gray-400">I can also make a mean latte</p>
-        <Link to="/contact">
-          <button className="border-2 border-yellow-600 bg-[#131316] hover:bg-yellow-600 hover:border-white text-white font-semidbold py-3 px-6 rounded transition duration-300">
-            Contact Me
-          </button>
-        </Link>
       </div>
 
     </section>

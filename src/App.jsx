@@ -10,9 +10,7 @@ import projects from './projects.json';
 const App = () => {
 
   const navLinks = [
-    { path: '/about',    text: 'about' },
-    { path: '/portfolio', text: 'portfolio' },
-    { path: '/contact',  text: 'contact' }
+    { path: '/portfolio', text: 'portfolio' }
   ];
 
   return (
@@ -20,9 +18,7 @@ const App = () => {
       <Header logoText='JF' navLinks={navLinks} />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Projects projects={projects} />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

@@ -76,7 +76,7 @@ const Header = ({ logoText, navLinks }) => {
           {/* Close button for mobile menu */}
           <i onClick={toggleMenu} className="text-gray-300 hover:text-white fa-solid fa-times fa-lg"></i> {/* Close icon */}
           
-          <ul className="flex flex-col space-y-6 mt-3">
+          <ul className="flex flex-col space-y-6 mt-2">
             {navLinks.map((link, index) => (
               <li key={index} className={location.pathname === link.path ? "text-gray-400" : ""}>
                 <Link
@@ -94,9 +94,9 @@ const Header = ({ logoText, navLinks }) => {
                 href="/files/resume.pdf"
                 download="Jesse_Fryer_Resume.pdf"
                 onClick={handleResumeClick}
-                className="hover:text-white text-gray-300 font-semidbold transition duration-300"
+                className="hover:text-white text-gray-300 font-semibold transition duration-300"
               >
-                <span>resume </span>
+                <span className="font-semibold">resume </span>
                 <span>
                   {isDownloaded ? (
                     <i className="fa-solid fa-check-to-slot"></i>
