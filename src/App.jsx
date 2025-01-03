@@ -19,20 +19,27 @@ export default function App() {
     // Main container
     <div className='w-full flex justify-center items-start'>
       {/* Capped width container to hold all content */}
-      <div className='w-full max-w-7xl flex flex-col justify-start items-center space-y-4 p-4'>
+      <div className='w-full max-w-7xl flex flex-col justify-start items-center space-y-4 px-4 py-8'>
 
-        {/* Heading */}
-        <h1>
-          <span className='text-2xl text-gray-400'>Hi I'm </span>
-          <span className='text-3xl font-bold text-gray-300'>Jesse</span>
-        </h1>
+        <div className='flex space-x-4 justify-center items-center'>
+          {/* Headshot*/}
+          <img src='/images/MyHead.jpg' className='size-24 rounded-full'></img>
 
-        {/* Subheading */}
-        <p>
-          <span className='text-xl text-gray-400'>A passionate </span>
-          <span className='text-2xl text-blue-300'>Full Stack</span>
-          <span className='text-xl text-gray-400'> developer</span>
-        </p>
+          <div className='flex flex-col space-y-2 justify-center items-start'>
+            {/* Heading */}
+            <h1>
+              <span className='text-2xl text-gray-400'>Hi I'm </span>
+              <span className='text-3xl font-bold text-gray-300'>Jesse</span>
+            </h1>
+
+            {/* Subheading */}
+            <p>
+              <span className='text-xl text-gray-400'>A passionate </span>
+              <span className='text-2xl text-blue-300'>Full Stack</span>
+              <span className='text-xl text-gray-400'> developer</span>
+            </p>
+          </div>
+        </div>
 
         {/* Download CV */}
         <a className='flex space-x-2 justify-center items-center' href='/files/cv.pdf' target='_blank' rel='noopener noreferrer'>
@@ -46,7 +53,7 @@ export default function App() {
         {/* Portfolio*/}
         <div className='flex w-full justify-center items-center space-x-4'>
           <button className='text-gray-500 text-4xl' onClick={() => changeSelectedProject(-1)}>{'<'}</button>
-          <h1 className='text-2xl text-gray-300'>Portfolio</h1>
+          <h1 className='text-lg md:text-2xl text-gray-300'>Portfolio</h1>
           <button className='text-gray-500 text-4xl' onClick={() => changeSelectedProject(1)}>{'>'}</button>
         </div>
         <Project project={projects[selectedProject]}/>
