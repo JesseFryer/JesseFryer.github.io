@@ -1,49 +1,34 @@
 [
   { 
-    "heading": "Stoff2D - 2D Game Engine", 
-    "description": "Stoff2D is a 2D game engine/library written in pure C. I developed a deep understanding and appreciation for data structures and algorithms to implement various engine features. There were many challenging moments that stretched my abilities, most notably creating a 2D batch renderer which also facilitates sprite atlasing. Another really interesting thing I learned and implemented was text rendering and font loading. I also implemented a fairly expressive particle system and my own animation file format which allows animations to be defined in a JSON-like style.",
+    "heading": "Artist's Website (freelance client)", 
+    "description": "I designed and developed a personal website for a local artist - Hamish Wilson (definitely check him out). The website functions as a web app for the admin, allowing full CRUD operations from the admin portal on all major content pages. This was important for Hamish since he produces art frequently and needs an easy way to keep his website updated.",
+    "features": ["admin portal", "database integration", "image optimisation", "clean UI", "responsive design", "cv builder"],
+    "videoPath": "/videos/hamishwilsonart.mp4",
+    "skills": ["React", "Tailwind", "CSS", "HTML", "Supabase"],
+    "links": [ 
+      { "description": "hamishwilson.art", "url": "https://hamish-wilson-art.pages.dev" }
+    ]
+  },
+  { 
+    "heading": "2D Game Engine", 
+    "description": "Stoff2D is a game engine/library written in C. It provides many game related systems all built from the ground up in pure C and OpenGL. This project improved my understanding and comptecency of data structures and memory",
+    "features": ["sprite rendering", "particle system", "animation system", "ecs", "text rendering", "ttf font loading"],
     "videoPath": "/videos/stoff2d.mp4",
     "github": "https://github.com/Stoff-Studios/Stoff2D",
-    "skills": {
-        "C": 100,
-        "CMake": 55,
-        "OpenGL": 85,
-        "Git": 75
-    }
+    "skills": [ "C", "CMake", "OpenGL", "Git", "GLSL" ],
+    "links": [ 
+      { "description": "matrix/vector math library", "url": "https://github.com/JesseFryer/clm" }
+    ]
   },
   { 
-    "heading": "Height Perceptions - Virtual Reality Experience", 
-    "description": "Height Perceptions is a 3D virtually reality experience where users can explore a magical toyshop, shrinking to the size of a toy. Developed by myslef and 5 other team-members, a mark of pride we had for this project was an expressive artstyle with completely bespoke assets. In only 13 weeks I worked closely with a fellow artist to produce all the assets for the experience. This project really challenged my ability to learn quickly in a fast paced team invironment.",
-    "videoPath": "/videos/height_perceptions.mp4",
-    "skills": {
-        "Blender": 100,
-        "C#": 50,
-        "Git": 85
-    }
-  },
-  { 
-    "heading": "This Website - PortFolio Website", 
-    "description": "I developed this portfolio website using React and Tailwind. I improved my ability to create intuitive and interesting user interfaces, as well as how to create a maintainable portfolio site which reads project information from a json file to make adding content easy",
-    "videoPath": "/videos/personal_website.mp4",
-    "github": "https://github.com/JesseFryer/personal-website",
-    "skills": {
-        "React": 100,
-        "JavaScript": 50,
-        "HTML": 35,
-        "CSS": 20,
-        "TailWind": 90
-    }
-  },
-  { 
-    "heading": "CGL - 3D Voxel Engine", 
-    "description": "CGL is a 3D voxel engine written in C and uses the OpenGL graphics API. The coolest thing about this project for me was developing all the 3D math myself. Every matrix and vector operation was developed as part of my own math library which followed conventions seen in cglm and glm. I had a blast implementing the greedy mesh algorithm for optimized chunk rendering and testing how effective batch rendering can be when applied to cubes.",
+    "heading": "3D Voxel Engine", 
+    "description": "CGL is a minecraft style voxel engine written in C. This project was a fun way for me to test a matrix/vector math library I was building and also push the limits of batch rendering to cubes out of curiosity of performance.",
+    "features": ["procedural generation", "minecraft camera", "cube batch renderer", "greedy mesh algorithm", "PHONG lighting"],
     "videoPath": "/videos/cgl.mp4",
     "github": "https://github.com/JesseFryer/CGL",
-    "skills": {
-        "C": 100,
-        "OpenGL": 90,
-        "Batch Script": 25,
-        "Git": 50
-    }
+    "skills": [ "C", "CMake", "OpenGL", "Git", "GLSL" ],
+    "links": [ 
+      { "description": "matrix/vector math library", "url": "https://github.com/JesseFryer/clm" }
+    ]
   }
 ]
