@@ -21,7 +21,7 @@ export default function App() {
       {/* Capped width container to hold all content */}
       <div className='w-full max-w-7xl flex flex-col justify-start items-center space-y-4 px-4 py-8'>
 
-        <div className='flex space-x-4 justify-center items-center'>
+        <div className='flex space-x-6 justify-center items-center'>
           {/* Headshot*/}
           <img src='/images/MyHead.jpg' className='size-24 rounded-full'></img>
 
@@ -56,6 +56,7 @@ export default function App() {
           <h1 className='text-lg md:text-2xl text-gray-300'>Portfolio</h1>
           <button className='text-gray-500 text-4xl' onClick={() => changeSelectedProject(1)}>{'>'}</button>
         </div>
+        <p className='text-gray-500 text-md md:text-lg'>{selectedProject + 1}/{projects.length}</p>
         <Project project={projects[selectedProject]}/>
 
       </div>
