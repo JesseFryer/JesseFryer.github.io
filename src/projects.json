@@ -4,7 +4,7 @@
     "description": "I designed and developed a personal website for a local artist - Hamish Wilson (definitely check him out). The website functions as a web app for the admin, allowing full CRUD operations from the admin portal on all major content pages. This was important for Hamish since he produces art frequently and needs an easy way to keep his website updated.",
     "features": ["admin portal", "database integration", "image optimisation", "clean UI", "responsive design", "cv builder"],
     "videoPath": "/videos/hamishwilsonart.mp4",
-    "skills": ["React", "Tailwind", "CSS", "HTML", "Supabase"],
+    "skills": ["React", "Tailwind", "Supabase", "Git"],
     "links": [ 
       { "description": "hamishwilson.art", "url": "https://hamish-wilson-art.pages.dev" }
     ]

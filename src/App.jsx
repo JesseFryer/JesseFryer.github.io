@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import Project from './components/Project';
 import projects from './projects.json';
 
+import { motion } from "framer-motion";
+
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(0);
+  const [clickDirection, setClickDirection] = useState(1); // -1 is left 1 is right
 
   const changeSelectedProject = (dir) => {
     let newProject = selectedProject + dir;
@@ -13,13 +16,14 @@ export default function App() {
       newProject = 0;
     }
     setSelectedProject(newProject);
+    setClickDirection(dir);
   }
 
   return (
     // Main container
     <div className='w-full flex justify-center items-start'>
       {/* Capped width container to hold all content */}
-      <div className='w-full max-w-7xl flex flex-col justify-start items-center space-y-4 px-4 py-8'>
+      <div className='w-full max-w-7xl flex flex-col justify-start items-center space-y-3 px-4 py-8'>
 
         <div className='flex space-x-6 justify-center items-center'>
           {/* Headshot*/}
@@ -52,12 +56,32 @@ export default function App() {
 
         {/* Portfolio*/}
         <div className='flex w-full justify-center items-center space-x-4'>
-          <button className='text-gray-500 text-4xl' onClick={() => changeSelectedProject(-1)}>{'<'}</button>
-          <h1 className='text-lg md:text-2xl text-gray-300'>Portfolio</h1>
-          <button className='text-gray-500 text-4xl' onClick={() => changeSelectedProject(1)}>{'>'}</button>
+          {/* Left button */}
+          <button className='text-gray-500 text-3xl' onClick={() => changeSelectedProject(-1)}>
+            <motion.i
+              className="fa-solid fa-left-long"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1, ease: "easeInOut" }}
+            >
+            </motion.i>
+          </button>
+          <h1 className='text-lg md:text-2xl text-gray-300 font-semibold'>Portfolio</h1>
+          {/* Right button */}
+          <button className='text-gray-500 text-3xl' onClick={() => changeSelectedProject(1)}>
+            <motion.i
+              className="fa-solid fa-right-long"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1, ease: "easeInOut" }}
+            >
+            </motion.i>
+          </button>
         </div>
         <p className='text-gray-500 text-md md:text-lg'>{selectedProject + 1}/{projects.length}</p>
-        <Project project={projects[selectedProject]}/>
+
+        {/* Project */}
+        <Project key={selectedProject} project={projects[selectedProject]} enterDirection={clickDirection}/>
 
       </div>
     </div>
