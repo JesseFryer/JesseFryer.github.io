@@ -46,7 +46,7 @@ export default function App() {
         </div>
 
         {/* Download CV */}
-        <a className='flex space-x-2 justify-center items-center' href='/files/cv.pdf' target='_blank' rel='noopener noreferrer'>
+        <a className='flex space-x-2 justify-center items-center' href='/files/JesseFryerCV.pdf' target='_blank' rel='noopener noreferrer'>
           <i className="fa-solid fa-download text-gray-300 text-lg"></i>
           <p className='text-gray-300 text-lg'>cv</p>
         </a>
