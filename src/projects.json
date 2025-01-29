@@ -6,7 +6,7 @@
     "videoPath": "/videos/hamishwilsonart.mp4",
     "skills": ["Next.js", "Docker", "TypeScript", "Supabase", "Git"],
     "links": [ 
-      { "description": "hamishwilson.art", "url": "http://hamishwilson.art" }
+      { "description": "check it out yourself before its live!", "url": "http://209.38.87.85:3000" }
     ]
   },
   { 
